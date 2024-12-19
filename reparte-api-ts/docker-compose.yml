@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-reparte
+    env_file:
+      - .env
+    volumes:
+      - ../mysql/data:/var/lib/mysql
+      - ./src/db:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always
+    networks:
+      - db-network
+
+networks:
+  db-network:
+    driver: bridge
