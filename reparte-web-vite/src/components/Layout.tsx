@@ -15,9 +15,9 @@ export default function Layout({children}: Readonly<LayoutProps>) {
     }
 
     return (
-        <div className="flex h-screen bg-gray-50">
+        <div className="flex min-h-screen bg-gray-50">
             <Sidebar/>
-            <main className="flex-1 overflow-auto">
+            <main className="flex-1 w-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="max-w-3xl mx-auto">
                         {children}

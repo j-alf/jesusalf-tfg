@@ -25,7 +25,7 @@ export default function Modal({isOpen, onClose, title, children}: Readonly<Modal
                     <div className="fixed inset-0 bg-black/25"/>
                 </TransitionChild>
 
-                <div className="fixed inset-y-0 right-0 left-64 overflow-y-auto">
+                <div className="fixed inset-0 lg:pl-64 overflow-y-auto">
                     <div className="flex min-h-full items-center justify-center p-4 text-center">
                         <TransitionChild
                             as={Fragment}
@@ -37,7 +37,7 @@ export default function Modal({isOpen, onClose, title, children}: Readonly<Modal
                             leaveTo="opacity-0 scale-95"
                         >
                             <DialogPanel
-                                className="w-full max-w-2xl transform overflow-visible rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                                 <div className="flex justify-between items-center mb-4">
                                     <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
                                         {title}

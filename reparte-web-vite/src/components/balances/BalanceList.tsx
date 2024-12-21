@@ -17,13 +17,13 @@ export default function BalanceList({balances}: Readonly<BalanceListProps>) {
             {balances.map(balance => (
                 <div
                     key={balance.memberId}
-                    className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
+                    className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-50 rounded-lg space-y-2 sm:space-y-0"
                 >
-                    <div>
+                    <div className="space-y-1 sm:space-y-0">
                         <h3 className="font-medium text-gray-900">{balance.name}</h3>
-                        <div className="text-sm text-gray-500 mt-1">
+                        <div className="text-sm text-gray-500 flex flex-col sm:flex-row sm:space-x-2">
                             <span>Pagado: {balance.totalPaid.toFixed(2)} €</span>
-                            <span className="mx-2">•</span>
+                            <span className="hidden sm:inline">•</span>
                             <span>Pendiente: {balance.totalOwed.toFixed(2)} €</span>
                         </div>
                     </div>
